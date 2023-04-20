@@ -30,33 +30,33 @@ export default function Home() {
       })
   }, [])
 
-  function renderStars(average) {
-    const fullStars = Math.floor(average);
-    const halfStar = average - fullStars >= 0.5 ? 1 : 0;
-    const emptyStars = 5 - fullStars - halfStar;
+  // function renderStars(average) {
+  //   const fullStars = Math.floor(average);
+  //   const halfStar = average - fullStars >= 0.5 ? 1 : 0;
+  //   const emptyStars = 5 - fullStars - halfStar;
 
-    return (
-      <>
-        {Array(fullStars)
-          .fill()
-          .map((_, index) => (
-            <span key={index} className="text-yellow-400">
-              &#x2605;
-            </span>
-          ))}
-        {halfStar ? (
-          <span className="text-yellow-400">&#x00BD;</span>
-        ) : null}
-        {Array(emptyStars)
-          .fill()
-          .map((_, index) => (
-            <span key={index + fullStars + halfStar} className="text-gray-600">
-              &#x2605;
-            </span>
-          ))}
-      </>
-    );
-  }
+  //   return (
+  //     <>
+  //       {Array(fullStars)
+  //         .fill()
+  //         .map((_, index) => (
+  //           <span key={index} className="text-yellow-400">
+  //             &#x2605;
+  //           </span>
+  //         ))}
+  //       {halfStar ? (
+  //         <span className="text-yellow-400">&#x00BD;</span>
+  //       ) : null}
+  //       {Array(emptyStars)
+  //         .fill()
+  //         .map((_, index) => (
+  //           <span key={index + fullStars + halfStar} className="text-gray-600">
+  //             &#x2605;
+  //           </span>
+  //         ))}
+  //     </>
+  //   );
+  // }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-start p-4">
